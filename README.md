@@ -9,34 +9,55 @@ It labels each pdf section according its function in the document (Title, header
 ## Usage
 
 ### Environment Setup
+It's recommended to create a new enviroment in order to avoid lib. version errors.The tool was tested under **python 3.7**, I highly recoomed using the same.
 
-
-Check requirements.txt to see all requiered packages.
-
-A virtual environment ready-to-use has been created for the CTE-AMD cluster. All dependencies has been installed.
-To start it up:
-
+YOu can create a virtual env with the following command:
 
 ```bash
-cd /gpfs/projects/bsc88/projects/NextProcurement_v2
-source use_env_venv.sh
+python -m venv env 
 ```
-### Usage
+
+and activating it with:
+
 
 ```bash
-python model_trainer/pipeline/pipeline.py  \
+source env/bin/activate
+```
+
+Then, dependencies should be installed:
+
+
+PYTHON DEPENDENCIES:
+```bash
+pip install --upgrade pip
+pip install --use-pep517 -r requirements.txt
+```
+
+SYSTEM DEPENDENCIES:
+ - poppler (this one is a little bit hard to install, this might helps you: https://cbrunet.net/python-poppler/installation.html)
+
+ - terrasec-ocr
+
+ - leptonica
+
+
+### Usage
+First remenber to have the virtual enviroment already activated. Then,
+
+```bash
+python pipeline/pipeline.py  \
         --input <pdf file> | <folder with pdf files>> \
         --output <output folder> \
-        --model <model paht> (desired model classify the sections (excluding tables) (title, header,etc.) )
+        --model <model paht> [NOT REQUIERED, will take default model if not specified] (desired model classify the sections (excluding tables) (title, header,etc.) )
 ```
 
 #### Example of use
 
 ```bash
 python pipeline/pipeline.py  \
-        --input /gpfs/projects/bsc88/projects/NextProcurement_v2/TESTING/INPUT/folder_with_pdfs \
-        --output testing_docs/OUTPUT \
-        --model /gpfs/projects/bsc88/projects/NextProcurement/model_trainer/output/NextProcurement/next_procurement_v0_8_0.00005_date_22-08-13_time_04-51-37 \
+        --input home/user/Escritorio/folder_with_pdfs \
+        --output  home/user/Escritorio/output_folder_nextprocurement_project \
+        --model pipeline/models/next_procurement_v0_8_0.00005_date_22-08-13_time_04-51-37 \
 ```
 #### Ouput format
 
