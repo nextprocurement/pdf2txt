@@ -66,7 +66,7 @@ def main(*args, **kwargs):
 
 
     parser.add_argument("-m", "--model", 
-                        default="../output/NextProcurement/next_procurement_v0_8_0.00005_date_22-08-13_time_04-51-37",
+                        default="pipeline/models/next_procurement_v0_8_0.00005_date_22-08-13_time_04-51-37",
                         help="Path to used doc-processing model.")
 
 
