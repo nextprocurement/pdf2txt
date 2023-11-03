@@ -69,8 +69,8 @@ python pipeline/pipeline.py  \
 
 ```bash
 python pipeline/pipeline.py  \
-        --input home/user/Escritorio/folder_with_pdfs \
-        --output  home/user/Escritorio/output_folder_nextprocurement_project \
+        --input examples_input_folder \
+        --output  output_folder_nextprocurement_project \
         --model pipeline/models/nextprocurement_pdfutils/ \
 ```
 #### Ouput format
