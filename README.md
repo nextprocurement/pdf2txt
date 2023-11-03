@@ -10,9 +10,15 @@ It labels each pdf section according its function in the document (Title, header
 
 ### Downloading AI model
 
-Due to github size limitations this model should be downloaded from [LINK PENDING TO BE ADDED] and decompressed under 
+Due to github size limitations this model should be downloaded from https://huggingface.co/adriwitek/nextprocurement_pdfutils . To achieve that we can do:
+
+
 ```bash
-pipeline/models/
+cd pipeline/models/
+
+# Make sure you have git-lfs installed (https://git-lfs.com)
+git lfs install
+git clone https://huggingface.co/adriwitek/ne
 ```
 
 
@@ -65,7 +71,7 @@ python pipeline/pipeline.py  \
 python pipeline/pipeline.py  \
         --input home/user/Escritorio/folder_with_pdfs \
         --output  home/user/Escritorio/output_folder_nextprocurement_project \
-        --model pipeline/models/next_procurement_v0_8_0.00005_date_22-08-13_time_04-51-37 \
+        --model pipeline/models/nextprocurement_pdfutils/ \
 ```
 #### Ouput format
 
