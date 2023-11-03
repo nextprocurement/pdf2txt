@@ -8,6 +8,14 @@ It labels each pdf section according its function in the document (Title, header
 
 ## Usage
 
+### Downloading AI model
+
+Due to github size limitations this model should be downloaded from [LINK PENDING TO BE ADDED] and decompressed under 
+```bash
+pipeline/models/
+```
+
+
 ### Environment Setup
 It's recommended to create a new enviroment in order to avoid lib. version errors.The tool was tested under **python 3.7**, I highly recoomed using the same.
 
@@ -42,7 +50,7 @@ SYSTEM DEPENDENCIES:
 
 
 ### Usage
-First remenber to have the virtual enviroment already activated. Then,
+Firstly remember to have the virtual enviroment already activated. Then,
 
 ```bash
 python pipeline/pipeline.py  \
