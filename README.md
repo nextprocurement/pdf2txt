@@ -18,7 +18,7 @@ cd pipeline/models/
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
-git clone https://huggingface.co/adriwitek/ne](https://huggingface.co/adriwitek/nextprocurement_pdfutils
+git clone https://huggingface.co/adriwitek/nextprocurement_pdfutils
 ```
 
 
