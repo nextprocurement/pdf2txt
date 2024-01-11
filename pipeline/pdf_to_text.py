@@ -96,8 +96,6 @@ def get_text_from_image(image):
 def get_paragraphs_from_pdf(pdf_path):
     """ Given a pdf path returns all paragraphs in that pdf
     """
-    print('pdf_path' + pdf_path)
-    print('type_pdf_path' + str(type(pdf_path)))
 
     #pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(poppler.__file__))
     pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(shutil.which("pdftoppm")))
@@ -309,16 +307,7 @@ def get_results_visualization(image_name, image, paragraphs_coords_and_label):
     # TODO
     cv2.imwrite(image_name, image)
 
-"""
-if __name__ == "__main__":
-    pdf_path = r"../../pdf_to_struct/ntp00000014_Pliego_Prescripciones_tecnicas_URI.pdf"
-    # pdfs = r"ntp00000055_Pliego_clausulas_administrativas_URI.pdf"
 
-    paragraphs = get_paragraphs_from_pdf(pdf_path)
-    for text in paragraphs:
-        print(text)
-    
-"""
 
 
         
