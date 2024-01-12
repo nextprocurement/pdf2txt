@@ -10,7 +10,7 @@ It labels each pdf section according its function in the document (Title, header
 
 ### Downloading AI model
 
-Due to github size limitations this model should be downloaded from https://huggingface.co/adriwitek/nextprocurement_pdfutils . To achieve that we can do:
+Due to github size limitations this model should be downloaded from https://huggingface.co/BSC-LT/NextProcurement_pdfutils . To achieve that we can do:
 
 
 ```bash
@@ -18,7 +18,7 @@ cd pipeline/models/
 
 # Make sure you have git-lfs installed (https://git-lfs.com)
 git lfs install
-git clone https://huggingface.co/adriwitek/nextprocurement_pdfutils
+git clone https://huggingface.co/BSC-LT/NextProcurement_pdfutils
 ```
 
 
