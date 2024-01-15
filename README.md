@@ -46,7 +46,7 @@ SYSTEM DEPENDENCIES:
  - poppler (this one is a little bit hard to install, this might helps you: https://cbrunet.net/python-poppler/installation.html)
  - leptonica
  - terrasec-ocr*
-   - *This files are alse needed by tesseact. Download and locate them under /usr/local/share/tessdata or /usr/share/tessdata:
+   - *This files are alse needed by tesseact. Download and locate them under /usr/share/tesseract-ocr/4.00/tessdata/ (Depending on the configuration it can also be under /usr/local/share/tessdata or /usr/share/tessdata):
      - Spanish OCR Model: https://github.com/tesseract-ocr/tessdata/blob/main/spa.traineddata
      - Catalan OCR Model: https://github.com/tesseract-ocr/tessdata/blob/main/cat.traineddata
      - Euskera OCR Model: https://github.com/tesseract-ocr/tessdata/blob/main/eus.traineddata
