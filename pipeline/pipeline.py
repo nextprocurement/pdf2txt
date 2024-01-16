@@ -133,7 +133,7 @@ def main(*args, **kwargs):
     tokenizer = AutoTokenizer.from_pretrained(str(args.model))
     model = AutoModelForSequenceClassification.from_pretrained(str(args.model))
     #pipe = pipeline("text-classification", model=model, tokenizer=tokenizer)
-    pipe = pipeline("text-classification", model=model, tokenizer=tokenizer, device = 0)
+    pipe = pipeline("text-classification", model=model, tokenizer=tokenizer, device = -1)
 
 
     # List of N docs to process (helpul when we want to paralellize)
