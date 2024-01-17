@@ -6,7 +6,7 @@ import pytesseract
 import matplotlib.pyplot as plt
 import os
 import numpy as np
-import shutil
+
 
 def overlap(c1, c2):
     """
@@ -96,18 +96,20 @@ def get_text_from_image(image):
 def get_paragraphs_from_pdf(pdf_path):
     """ Given a pdf path returns all paragraphs in that pdf
     """
-
-    #pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(poppler.__file__))
-    pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(shutil.which("pdftoppm")))
-
-    
+    pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(poppler.__file__))
     page_names = []
     i = 1
+
+    tmp_path = os.path.join( os.getcwd(), '.tmp_files')
+    if (not os.path.exists(tmp_path ) ):
+        os.makedirs(tmp_path )
+
     for page in pages:
-        image_name = "TMP_Page_" + str(i) + ".jpg"  
-        page.save(image_name, "JPEG")
+        image_name = "TMP_Page_" + str(i)  +  ".jpg"  
+        image_path = os.path.join(tmp_path, image_name)
+        page.save(image_path, "JPEG")
         i = i+1
-        page_names.append(image_name)
+        page_names.append(image_path)
     images_and_paragraphs = []
     for img_path in page_names:
         paragraphs = []
@@ -121,6 +123,8 @@ def get_paragraphs_from_pdf(pdf_path):
         os.remove(img_path)
         images_and_paragraphs.append([image, paragraphs])
     return images_and_paragraphs
+
+
 
 def detect_table(img):
     """ 
@@ -307,7 +311,16 @@ def get_results_visualization(image_name, image, paragraphs_coords_and_label):
     # TODO
     cv2.imwrite(image_name, image)
 
+"""
+if __name__ == "__main__":
+    pdf_path = r"../../pdf_to_struct/ntp00000014_Pliego_Prescripciones_tecnicas_URI.pdf"
+    # pdfs = r"ntp00000055_Pliego_clausulas_administrativas_URI.pdf"
 
+    paragraphs = get_paragraphs_from_pdf(pdf_path)
+    for text in paragraphs:
+        print(text)
+    
+"""
 
 
         
