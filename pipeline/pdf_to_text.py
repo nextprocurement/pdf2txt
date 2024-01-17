@@ -102,7 +102,13 @@ def get_paragraphs_from_pdf(pdf_path):
     page_names = []
     i = 1
 
-    tmp_path = os.path.join( os.getcwd(), '.tmp_files')
+
+    pdf_name = os.path.basename(os.path.realpath(pdf_path)).split('.')[0]
+    #tmp_path = os.path.join( os.getcwd(), '.tmp_files')
+    tmp_path = os.path.join( os.getcwd(), '.tmp_files', pdf_name)
+
+
+
     if (not os.path.exists(tmp_path ) ):
         os.makedirs(tmp_path )
 
