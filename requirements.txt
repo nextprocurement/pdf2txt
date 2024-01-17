@@ -5,8 +5,7 @@ matplotlib>=3.5.3
 transformers==4.26.1
 torch>=1.9.0
 pypdf2==3.0.1
-scikit-learn==1.0.2  # ln -s scikit-learn sklearn!!!!!!!!!!!!
-pdf_info==2.1.0
+scikit-learn==1.0.2
 pycryptodome==3.18.0
 pdfminer==20191125
 pybind11==2.10.4
