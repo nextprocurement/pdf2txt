@@ -6,7 +6,7 @@ import pytesseract
 import matplotlib.pyplot as plt
 import os
 import numpy as np
-
+import shutil
 
 def overlap(c1, c2):
     """
@@ -96,7 +96,9 @@ def get_text_from_image(image):
 def get_paragraphs_from_pdf(pdf_path):
     """ Given a pdf path returns all paragraphs in that pdf
     """
-    pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(poppler.__file__))
+    #pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(poppler.__file__))
+    pages = convert_from_path(pdf_path, 350, poppler_path = os.path.dirname(shutil.which("pdftoppm")))
+
     page_names = []
     i = 1
 
