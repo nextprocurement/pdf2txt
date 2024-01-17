@@ -130,6 +130,11 @@ def get_paragraphs_from_pdf(pdf_path):
             paragraphs.append([get_text_from_image(thresh1), c, img])
         os.remove(img_path)
         images_and_paragraphs.append([image, paragraphs])
+
+
+    #
+    shutil.rmtree(tmp_path)
+
     return images_and_paragraphs
 
 
