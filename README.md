@@ -23,7 +23,7 @@ git clone https://huggingface.co/BSC-LT/NextProcurement_pdfutils
 
 
 ### Environment Setup
-It's recommended to create a new enviroment in order to avoid lib. version errors.The tool was tested under **python 3.7**, I highly recoomed using the same.
+It's recommended to create a new enviroment in order to avoid lib. version errors.The tool was tested under **python 3.7**, I highly recoomed using the same. Another option is to use the provided docker described in the next section.
 
 YOu can create a virtual env with the following command:
 
@@ -42,7 +42,7 @@ Then, dependencies should be installed:
 
 
 
-SYSTEM DEPENDENCIES:
+#### SYSTEM DEPENDENCIES:
  - poppler (this one is a little bit hard to install, this might helps you: https://cbrunet.net/python-poppler/installation.html)
  - leptonica
  - terrasec-ocr*
@@ -54,7 +54,7 @@ SYSTEM DEPENDENCIES:
 
 
 
-PYTHON DEPENDENCIES:
+#### PYTHON DEPENDENCIES:
 ```bash
 pip install --upgrade pip
 pip install --use-pep517 -r requirements.txt
@@ -62,7 +62,30 @@ pip install --use-pep517 -r requirements.txt
 
 
 
+### Docker
 
+Since it can be tricky to install the environment from scratch, a docker image is provided. 
+
+To use it there are to options:
+
+ 1. Download it directly from the docker repository, available [here](https://hub.docker.com/r/adriwitek/pdf2txt).
+
+ 2. Creating it from the provided Dockerfile.
+
+    
+   To manually build the image (option 2) move to Docker/ folder and then type:
+
+```bash
+   docker build -t pdf2txt:1.0 .
+```
+
+And then:
+
+```bash
+   docker run -it ubuntu:22.04
+```
+
+To run the image creating a container. An interactive shell will be given with the "-it" argument.
 
 
 ### Usage
