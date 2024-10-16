@@ -82,7 +82,7 @@ To use it there are to options:
 And then:
 
 ```bash
-   docker run -it ubuntu:22.04
+   docker run -it pdf2txt:1.0
 ```
 
 To run the image creating a container. An interactive shell will be given with the "-it" argument.
