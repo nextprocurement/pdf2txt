@@ -120,7 +120,7 @@ Each parque file will contain the following columns:
 - **original_doc_name** : Original document where the current row info. was extracted.
 - **content** : XML/TXT content extracted from the pdf document.
 - **lang** : 'es'/'ca'/'eu'/'gl', according to the content language.
-- **translated_content** : If previous field was 'ca'/'eu'/'gl', the content translated to spanish. None if lang field was 'es'.
+- **translated_content** : If previous field was 'ca'/'eu'/'gl', the content translated to spanish. The field will be empyt (pandas '') if lang field was 'es'.
 
 
 
