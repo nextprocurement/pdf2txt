@@ -34,7 +34,7 @@ Since it can be tricky to install the environment from scratch, a docker image i
 
 To use it there are to options:
 
- 1. Download it directly from the docker repository, --> LINK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1.
+ 1. Download it directly from the docker [repository ](https://hub.docker.com/r/adriwitek/pdf2txt).
 
  2. Creating it from the provided Dockerfile:
 
