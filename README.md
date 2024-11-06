@@ -9,7 +9,7 @@ Dockerized pipeline to process pdf documents of public procurements.
 
 
 ## About the tool
-The PDF2TXT module has been implemented as a dockerised pipeline, so that it can be easily used on any platform.
+The PDF2TXT module has been implemented as a dockerized pipeline, so that it can be easily used on any platform.
 By providing a directory with PDF documents as input to it, output files with apache parquet extension are generated.
 
 The text of each input PDF document is extracted (tables are omitted) and its language is identified.
