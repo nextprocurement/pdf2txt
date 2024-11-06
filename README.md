@@ -2,7 +2,7 @@
 
 Dockerized pipeline to process pdf documents of public procurements.
 
-![alt text](https://github.com/TeMU-BSC/NextProcurement_v2/blob/main/img/pdf2txt_scheme.png "Pipeline Scheme.")
+![alt text](https://github.com/nextprocurement/pdf2txt/blob/main/img/pdf2txt_scheme.png "Pipeline Scheme.")
 
 
 
@@ -28,7 +28,7 @@ Since it can be tricky to install the environment from scratch, a docker image i
 
 ### 1. Getting the Docker Image.
 
-![alt text](https://github.com/TeMU-BSC/NextProcurement_v2/blob/main/img/docker_logo.jpg "docker icon.")
+![alt text](https://github.com/nextprocurement/pdf2txt/blob/main/img/docker_logo.jpg "docker icon.")
 
 
 
@@ -103,7 +103,7 @@ Or following the previous example
 ```
 If not, the output will be structured in sections as an XML document:
 
-![alt text](https://github.com/TeMU-BSC/NextProcurement_v2/blob/main/img/page_0.jpg "Example of an page_X.jpg")
+![alt text](https://github.com/nextprocurement/pdf2txt/blob/main/img/page_0.jpg "Example of an page_X.jpg")
 
 
 
@@ -126,6 +126,6 @@ Each parque file will contain the following columns:
 
 Here is and example of a parquet file:
 
-![alt text](https://github.com/TeMU-BSC/NextProcurement_v2/blob/main/img/parquet.png "Example of an output.")
+![alt text](https://github.com/nextprocurement/pdf2txt/blob/main/img/parquet.png "Example of an output.")
 
 
